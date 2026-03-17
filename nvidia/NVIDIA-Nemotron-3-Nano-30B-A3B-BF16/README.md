@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/aryadoshii/qubrid-models/main/assets/qubrid_banner%20(2).png" alt="Qubrid AI" width="100%"/>
+  <img src="https://raw.githubusercontent.com/aryadoshii/qubrid-models/main/assets/qubrid_banner%20.png" alt="Qubrid AI" width="100%"/>
 </div>
 
 <div align="center">
