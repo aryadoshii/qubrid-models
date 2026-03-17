@@ -1,4 +1,8 @@
 <div align="center">
+  <img src="https://raw.githubusercontent.com/aryadoshii/qubrid-models/main/assets/qubrid_banner%20(2).png" alt="Qubrid AI" width="100%"/>
+</div>
+
+<div align="center">
 
 # Qwen3 Next 80B A3B Thinking
 
