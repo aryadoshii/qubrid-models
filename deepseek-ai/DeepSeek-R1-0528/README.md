@@ -4,16 +4,16 @@
 
 <div align="center">
 
-# NVIDIA Nemotron-3 Super 120B A12B FP8
+# DeepSeek R1 0528
 
-**NVIDIA · Chat / LLM · 120B Parameters (12B Active) · 256K Context (up to 1M)**
+**DeepSeek · Chat / LLM · 671B Parameters (37B Active) · 128K Context**
 
-[![Qubrid](https://img.shields.io/badge/Qubrid-Platform-5D29F0?style=flat-square)](https://platform.qubrid.com/model/nvidia-NVIDIA-Nemotron-3-Super-120B-A12B-FP8)
-[![Playground](https://img.shields.io/badge/Try_in-Playground-AE6DFF?style=flat-square)](https://platform.qubrid.com/playground?model=nvidia%2FNVIDIA-Nemotron-3-Super-120B-A12B-FP8)
-[![License](https://img.shields.io/badge/License-NVIDIA_Nemotron_Open_Model-blue?style=flat-square)](https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8/blob/main/LICENSE)
-[![HuggingFace](https://img.shields.io/badge/HuggingFace-nvidia%2FNVIDIA--Nemotron--3--Super--120B--A12B--FP8-orange?style=flat-square)](https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8)
+[![Qubrid](https://img.shields.io/badge/Qubrid-Platform-5D29F0?style=flat-square)](https://platform.qubrid.com/model/deepseek-ai-DeepSeek-R1-0528)
+[![Playground](https://img.shields.io/badge/Try_in-Playground-AE6DFF?style=flat-square)](https://platform.qubrid.com/playground?model=deepseek-ai%2FDeepSeek-R1-0528)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://opensource.org/licenses/MIT)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-deepseek--ai%2FDeepSeek--R1--0528-orange?style=flat-square)](https://huggingface.co/deepseek-ai/DeepSeek-R1-0528)
 
-`Function Calling` `Streaming` `Reasoning` `Agent Workflows` `Long Context` `Code` `Tool Use`
+`Streaming` `Reasoning` `Chain-of-Thought` `Code` `JSON Output` `Long Context`
 
 </div>
 
@@ -21,11 +21,11 @@
 
 ## Overview
 
-**NVIDIA Nemotron-3 Super 120B A12B FP8** is an open-weight LLM built for agentic reasoning and high-volume enterprise workloads. Using a hybrid **LatentMoE architecture** (Mamba-2 + MoE + Attention) with Multi-Token Prediction (MTP) and native NVFP4 pretraining on **25T tokens**, it delivers up to **2.2x higher throughput than GPT-OSS-120B** and **7.5x higher than Qwen3.5-122B**. With a native **1M-token context window**, configurable thinking mode, and 60.47% on SWE-Bench Verified, it is purpose-built for collaborative agents, long-context reasoning, and IT automation across 7 languages — served instantly via the [Qubrid AI Serverless API](https://platform.qubrid.com).
+**DeepSeek R1-0528** is the May 2025 update to the original DeepSeek-R1 — built on the DeepSeek-V3 backbone with **671B total parameters and 37B active per inference pass** via Sparse MoE. It achieves performance on par with OpenAI o1, with key improvements including **87.5% on AIME 2025** (up from 70%), reduced hallucinations, enhanced front-end capabilities, and newly added JSON output and function calling support. With chain-of-thought reasoning traces and MIT licensing, R1-0528 is one of the most capable open-source reasoning models available today — served instantly via the [Qubrid AI Serverless API](https://platform.qubrid.com).
 
-> ⚡ **2.2x throughput vs GPT-OSS-120B. 1M token context. 512 experts, 22 active per token.**
+> 🧠 **671B total / 37B active — frontier reasoning at MoE efficiency.**
 >
-> Deploy on [Qubrid AI](https://platform.qubrid.com) — no H100 cluster required.
+> Deploy via [Qubrid AI](https://platform.qubrid.com) with no infrastructure required.
 
 ---
 
@@ -33,17 +33,17 @@
 
 | Field | Details |
 |---|---|
-| **Model ID** | `nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8` |
-| **Provider** | NVIDIA |
+| **Model ID** | `deepseek-ai/DeepSeek-R1-0528` |
+| **Provider** | DeepSeek |
 | **Kind** | Chat / LLM |
-| **Architecture** | LatentMoE — Mamba-2 + MoE + Attention hybrid with MTP; 512 experts, 22 active per token; 120B total / 12B active |
-| **Parameters** | 120B total (12B active per inference pass) |
-| **Context Length** | 256K Tokens (up to 1M) |
+| **Architecture** | DeepSeek-V3 backbone — Sparse MoE with 671B total / 37B active, MLA attention, MTP speculative decoding |
+| **Parameters** | 671B total (37B active per inference pass) |
+| **Context Length** | 128,000 Tokens |
 | **MoE** | No |
-| **Release Date** | March 11, 2026 |
-| **License** | NVIDIA Nemotron Open Model License |
-| **Training Data** | 25T token corpus (NVFP4 native pretraining): web, code, math, science, multilingual; post-training cutoff February 2026; pre-training cutoff June 2025 |
-| **Function Calling** | Supported |
+| **Release Date** | May 2025 |
+| **License** | MIT |
+| **Training Data** | Large-scale diverse dataset; post-trained with RL (GRPO) for enhanced reasoning depth |
+| **Function Calling** | Not Supported |
 | **Image Support** | N/A |
 | **Serverless API** | Available |
 | **Fine-tuning** | Coming Soon |
@@ -58,9 +58,9 @@
 
 | Token Type | Price per 1M Tokens |
 |---|---|
-| **Input Tokens** | $0.10 |
-| **Input Tokens (Cached)** | $0.04 |
-| **Output Tokens** | $0.50 |
+| **Input Tokens** | $0.90 |
+| **Input Tokens (Cached)** | $0.28 |
+| **Output Tokens** | $3.20 |
 
 ---
 
@@ -72,7 +72,7 @@
 2. Generate your API key from the [API Keys](https://platform.qubrid.com/api-keys) section
 3. Replace `QUBRID_API_KEY` in the code below with your actual key
 
-> 💡 **Temperature & Top P:** Use `temperature=1` and `top_p=0.95` — recommended for all tasks with this model.
+> ⚠️ **Temperature note:** Keep temperature in the **0.5–0.7 range** (default `0.6`) to prevent repetitive outputs. Values outside this range may degrade reasoning quality.
 
 ---
 
@@ -89,15 +89,15 @@ client = OpenAI(
 
 # Create a streaming chat completion
 stream = client.chat.completions.create(
-    model="nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
+    model="deepseek-ai/DeepSeek-R1-0528",
     messages=[
       {
         "role": "user",
         "content": "Explain quantum computing in simple terms"
       }
     ],
-    max_tokens=16000,
-    temperature=1,
+    max_tokens=16384,
+    temperature=0.6,
     top_p=0.95,
     stream=True
 )
@@ -127,15 +127,15 @@ const client = new OpenAI({
 
 // Create a streaming chat completion
 const stream = await client.chat.completions.create({
-  model: 'nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8',
+  model: 'deepseek-ai/DeepSeek-R1-0528',
   messages: [
     {
       "role": "user",
       "content": "Explain quantum computing in simple terms"
     }
   ],
-  max_tokens: 16000,
-  temperature: 1,
+  max_tokens: 16384,
+  temperature: 0.6,
   top_p: 0.95,
   stream: true
 });
@@ -171,15 +171,15 @@ func main() {
 	url := "https://platform.qubrid.com/v1/chat/completions"
 
 	data := map[string]interface{}{
-		"model": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
-		"messages": []map[string]string{
+		"model": "deepseek-ai/DeepSeek-R1-0528",
+		"messages": []map[string]interface{}{
 			{
 				"role":    "user",
 				"content": "Explain quantum computing in simple terms",
 			},
 		},
-		"temperature": 1,
-		"max_tokens":  16000,
+		"temperature": 0.6,
+		"max_tokens":  16384,
 		"stream":      true,
 		"top_p":       0.95,
 	}
@@ -212,15 +212,15 @@ curl -X POST "https://platform.qubrid.com/v1/chat/completions" \
   -H "Authorization: Bearer QUBRID_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-  "model": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
+  "model": "deepseek-ai/DeepSeek-R1-0528",
   "messages": [
     {
       "role": "user",
       "content": "Explain quantum computing in simple terms"
     }
   ],
-  "temperature": 1,
-  "max_tokens": 16000,
+  "temperature": 0.6,
+  "max_tokens": 16384,
   "stream": true,
   "top_p": 0.95
 }'
@@ -230,84 +230,77 @@ curl -X POST "https://platform.qubrid.com/v1/chat/completions" \
 
 ## Live Example
 
-> **Prompt:** `What are the benefits of renewable energy?`
+> **Prompt:** `Explain quantum computing in simple terms`
 
 **Response:**
 
 ```
-Renewable energy offers a broad set of benefits spanning environmental,
-economic, and strategic dimensions:
+<think>
+The user wants a simple explanation of quantum computing.
+I should cover qubits, superposition, entanglement, and practical
+applications without overwhelming technical detail.
+</think>
 
-Environmental
-  • Zero direct emissions during operation — solar, wind, and hydro produce
-    no CO₂, SOₓ, or NOₓ at the point of generation
-  • Reduces dependence on fossil fuel extraction, lowering habitat disruption,
-    water contamination risk, and land use pressure
-  • Contributes directly to national and international decarbonization targets
-    (Paris Agreement, net-zero commitments)
+Quantum computing — simplified:
 
-Economic
-  • Levelized cost of energy (LCOE) for solar and onshore wind is now lower
-    than new coal or gas plants in most markets
-  • Creates long-term stable energy pricing — no fuel cost volatility
-  • Generates local employment in manufacturing, installation, and maintenance
-  • Attracts investment: clean energy is the fastest-growing segment of
-    infrastructure capital globally
+Classical computers store information as bits: 0 or 1.
+Quantum computers use qubits, which can be 0, 1, or both simultaneously
+(superposition) — like a coin spinning before it lands.
 
-Energy Security
-  • Reduces import dependency on oil, gas, and coal from geopolitically
-    unstable regions
-  • Distributed generation (rooftop solar, microgrids) improves grid
-    resilience against outages and cyberattacks
-  • Nations with abundant sun, wind, or hydro can achieve near-complete
-    domestic energy independence
+This lets quantum computers evaluate many possible solutions at once,
+rather than sequentially — making them exponentially faster for
+specific problem types.
 
-Technological Spillovers
-  • Advances in battery storage, smart grids, and power electronics driven
-    by renewables deployment benefit the broader economy
-  • Supports electrification of transport, heating, and industrial processes
+Two key quantum properties:
 
-Tradeoffs to consider:
-  • Intermittency (solar/wind) requires storage or grid balancing solutions
-  • Large-scale installations have land and materials requirements
-  • Upfront capital costs remain higher for some technologies vs. fossil alternatives
+  1. Superposition  — a qubit exists in multiple states at once until measured
+  2. Entanglement   — two qubits can be linked so the state of one
+                      instantly determines the state of the other,
+                      enabling coordinated computation at massive scale
 
-Net assessment: for most economies, renewable energy now represents the most
-cost-effective, low-risk long-term energy strategy available.
+Where quantum computing matters most:
+  - Cryptography (breaking and building encryption systems)
+  - Drug discovery (simulating molecular structures)
+  - Optimization (logistics, financial portfolio modeling)
+  - Machine learning acceleration
+
+Important caveat: quantum computers aren't replacing laptops.
+They're precision instruments for problems that would take classical
+supercomputers millions of years to solve.
 ```
 
-*Try it yourself in the [Qubrid AI Playground →](https://platform.qubrid.com/playground?model=nvidia%2FNVIDIA-Nemotron-3-Super-120B-A12B-FP8)*
+*Try it yourself in the [Qubrid AI Playground →](https://platform.qubrid.com/playground?model=deepseek-ai%2FDeepSeek-R1-0528)*
 
 ---
 
 ## Playground Features
 
-The [Qubrid AI Playground](https://platform.qubrid.com/playground?model=nvidia%2FNVIDIA-Nemotron-3-Super-120B-A12B-FP8) lets you interact with Nemotron-3 Super 120B directly in your browser — no setup, no code, no cost to explore.
+The [Qubrid AI Playground](https://platform.qubrid.com/playground?model=deepseek-ai%2FDeepSeek-R1-0528) lets you interact with DeepSeek R1-0528 directly in your browser — no setup, no code, no cost to explore.
 
 ### 🧠 System Prompt
 
-Define the model's role, reasoning mode, and output constraints before the conversation begins. Particularly powerful for agentic pipelines, tool-use workflows, and structured enterprise tasks.
+Define the model's role, output format, and reasoning constraints before the conversation begins. Particularly powerful for structured reasoning tasks and JSON output workflows.
 
 ```
-Example: "You are an enterprise IT automation agent. Analyze incoming support
-tickets, classify them by severity and category, suggest resolution steps,
-and escalate critical issues with a structured JSON summary."
+Example: "You are an expert mathematician. Work through every problem
+step by step, show all intermediate reasoning, and always verify
+your answer before presenting it."
 ```
 
-> Set your system prompt once in the [Qubrid Playground](https://platform.qubrid.com/playground?model=nvidia%2FNVIDIA-Nemotron-3-Super-120B-A12B-FP8) and it applies across every turn of the conversation.
+> Set your system prompt once in the [Qubrid Playground](https://platform.qubrid.com/playground?model=deepseek-ai%2FDeepSeek-R1-0528) and it applies across every turn of the conversation.
 
 ---
 
 ### 🎯 Few-Shot Examples
 
-Guide the model's output structure and reasoning depth with concrete examples — no fine-tuning required. Especially effective for structured outputs and multi-step agentic tasks.
+Guide the model's reasoning style and output format with concrete examples — especially effective for complex structured tasks.
 
 | User Input | Assistant Response |
 |---|---|
-| `Ticket: "Server keeps crashing every 12 hours." Priority?` | `Priority: HIGH. Category: Infrastructure Stability. Suggested action: Check system logs for OOM events, review cron jobs scheduled near crash window, and verify disk I/O health.` |
-| `Summarize this 50-page policy document in 5 bullet points` | `• Scope: Applies to all employees handling customer PII. • Key requirement: Data must be encrypted at rest and in transit. • Breach protocol: Notify DPO within 72 hours. • Retention: 7-year maximum. • Non-compliance: Subject to disciplinary review.` |
+| `What is the derivative of x³ + 2x² - 5x + 1?` | `Step 1: Apply power rule to each term. d/dx(x³) = 3x², d/dx(2x²) = 4x, d/dx(-5x) = -5, d/dx(1) = 0. Result: 3x² + 4x - 5` |
+| `Debug this Python function: def add(a, b): return a - b` | `Bug found: The operator is subtraction (-) but the function name implies addition. Fix: return a + b` |
 
-> 💡 Stack multiple few-shot examples in the [Qubrid Playground](https://platform.qubrid.com/playground?model=nvidia%2FNVIDIA-Nemotron-3-Super-120B-A12B-FP8) to shape agentic behavior, output schema, and reasoning verbosity — no fine-tuning required.
+> 💡 Stack multiple few-shot examples in the [Qubrid Playground](https://platform.qubrid.com/playground?model=deepseek-ai%2FDeepSeek-R1-0528) to guide reasoning depth, chain-of-thought format, and output structure — no fine-tuning required.
 
 ---
 
@@ -316,20 +309,20 @@ Guide the model's output structure and reasoning depth with concrete examples �
 | Parameter | Type | Default | Description |
 |---|---|---|---|
 | **Streaming** | boolean | `true` | Enable streaming responses for real-time output |
-| **Temperature** | number | `1` | Controls randomness in output. Recommended: `1.0` for all tasks |
-| **Max Tokens** | number | `16000` | Maximum tokens to generate |
-| **Top P** | number | `0.95` | Controls nucleus sampling. Recommended: `0.95` for all tasks |
+| **Temperature** | number | `0.6` | Recommended range 0.5–0.7 to prevent endless repetitions |
+| **Max Tokens** | number | `16384` | Maximum number of tokens to generate |
+| **Top P** | number | `0.95` | Nucleus sampling: considers tokens with top_p probability mass |
 
 ---
 
 ## Use Cases
 
-1. Agentic workflows and multi-agent collaboration
-2. Long-context reasoning (up to 1M tokens)
-3. IT ticket automation and high-volume enterprise workloads
-4. Complex tool use and multi-step function calling
-5. RAG (Retrieval-Augmented Generation)
-6. Software engineering and cybersecurity triaging
+1. Advanced mathematical reasoning
+2. Code generation and debugging
+3. Complex multi-step problem solving
+4. Research and analysis
+5. JSON-structured output generation
+6. Function calling and tool use
 
 ---
 
@@ -337,23 +330,23 @@ Guide the model's output structure and reasoning depth with concrete examples �
 
 | Strengths | Limitations |
 |---|---|
-| LatentMoE: 512 experts / 22 active per token at same compute cost as standard MoE | Requires minimum 2× H100-80GB GPUs for local deployment |
-| 2.2x throughput vs GPT-OSS-120B; 7.5x vs Qwen3.5-122B | Thinking mode adds latency overhead; low-effort mode recommended for simple queries |
-| 60.47% SWE-Bench Verified; 83.73% MMLU-Pro; 79.23% GPQA | Not optimized for vision or multimodal inputs |
-| Native 1M token context — 91.75% on RULER @ 1M | Function calling supported but may need prompt engineering for complex schemas |
-| MTP speculative decoding: 3.45 avg acceptance length (up to 3x wall-clock speedup) | |
-| Configurable reasoning mode via `enable_thinking=True/False` | |
+| 671B total / 37B active MoE — frontier reasoning at high efficiency | 128K max context (shorter than some competitors) |
+| 87.5% on AIME 2025 — up +17.5% from previous version | Requires very large infrastructure for self-hosting |
+| Supports JSON output and function calling | Temperature must stay in 0.5–0.7 range |
+| Reduced hallucinations vs prior R1 | Reasoning traces increase total output length |
+| Fully open-source with MIT license | |
+| Chain-of-thought reasoning with visible traces | |
 
 ---
 
 ## Why Qubrid AI?
 
-- 🚀 **No infrastructure setup** — 120B MoE served serverlessly, pay only for what you use
+- 🚀 **No infrastructure setup** — 671B MoE served serverlessly, pay only for what you use
 - 🔁 **OpenAI-compatible** — drop-in replacement using the same SDK, just swap the base URL
-- 💰 **Cached input pricing** — $0.04/1M for cached tokens, critical for long-context and repeated RAG workloads
-- ⚡ **Throughput-optimized** — Nemotron's 2.2x speed advantage is fully realized on Qubrid's low-latency infrastructure
+- 💰 **Cached input pricing** — $0.28/1M for cached tokens, dramatically reducing costs on repeated context
 - 🧪 **Built-in Playground** — prototype with system prompts and few-shot examples instantly at [platform.qubrid.com](https://platform.qubrid.com)
 - 📊 **Full observability** — API logs and usage tracking built into the [Qubrid dashboard](https://platform.qubrid.com)
+- 🌐 **Multi-language support** — Python, JavaScript, Go, cURL out of the box
 
 ---
 
@@ -362,9 +355,9 @@ Guide the model's output structure and reasoning depth with concrete examples �
 | Resource | Link |
 |---|---|
 | 📖 Qubrid Docs | [docs.platform.qubrid.com](https://docs.platform.qubrid.com) |
-| 🎮 Playground | [Try Nemotron-3 Super 120B live](https://platform.qubrid.com/playground?model=nvidia%2FNVIDIA-Nemotron-3-Super-120B-A12B-FP8) |
+| 🎮 Playground | [Try DeepSeek R1-0528 live](https://platform.qubrid.com/playground?model=deepseek-ai%2FDeepSeek-R1-0528) |
 | 🔑 API Keys | [Get your API Key](https://platform.qubrid.com/api-keys) |
-| 🤗 Hugging Face | [nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8](https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8) |
+| 🤗 Hugging Face | [deepseek-ai/DeepSeek-R1-0528](https://huggingface.co/deepseek-ai/DeepSeek-R1-0528) |
 | 💬 Discord | [Join the Qubrid Community](https://discord.com/invite/Btsqxa6ZnQ) |
 
 ---
